@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christmas alone?</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #playButton {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #myAudio {
+      display: none;
+    }
+
+    .container .extra-text {
+      position: absolute;
+      inset: -40px 0 0 0;
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      color: #fff;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle"></div>
+    <div class="snow">
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+    </div>
+    <div class="extra-text">Christmas time is here. I hope you have a wonderful New Year. May every day hold happy hours for you.</div>
+  </div>
+
+  <button id="playButton">Play</button>
+
+  <audio id="myAudio" src="christmas.mp3" type="audio/mp3" controls></audio>
+  
+  <script>
+    const playButton = document.getElementById('playButton');
+    const audioElement = document.getElementById('myAudio');
+
+    // Bắt đầu phát nhạc khi nút được nhấp
+    playButton.addEventListener('click', function() {
+      if (audioElement.paused) {
+        audioElement.play();
+        playButton.innerHTML = 'Pause';
+      } else {
+        audioElement.pause();
+        playButton.innerHTML = 'Play';
+      }
+    });
+  </script>
+</body>
+</html>
