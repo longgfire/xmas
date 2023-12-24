@@ -77,14 +77,11 @@
   </div>
 
   <button id="playButton">Play</button>
-
   <audio id="myAudio" src="christmas.mp3" type="audio/mp3" controls></audio>
   
   <script>
     const playButton = document.getElementById('playButton');
     const audioElement = document.getElementById('myAudio');
-
-    // Bắt đầu phát nhạc khi nút được nhấp
     playButton.addEventListener('click', function() {
       if (audioElement.paused) {
         audioElement.play();
